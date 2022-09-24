@@ -11,7 +11,7 @@ pop_front(): 리스트 맨 앞 원소 삭제
 push_back(1): 리스트 맨 뒤에 원소1 추가
 pop_back(): 리스트 맨 뒤 원소 삭제
 insert(iterator, 1): iterator가 가리키는 부분 앞에 원소1을 추가
-erase(iterator): iterator가 가리키는 부분의 원소 삭제
+erase(iterator): iterator가 가리키는 부분의 원소 삭제 삭제후 다음 원소의 주소값 반환
 *iterator: iterator가 가리키는 원소에 접근
 front(): 첫번째 원소를 반환
 back(): 마지막 원소를 반환
