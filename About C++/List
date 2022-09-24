@@ -1,0 +1,23 @@
+#include<list>를 추가하여 사용
+*양방향 연결 리스트로 구현 되어 있음.
+
+
+
+list<int> v; list v생성
+v.begin() -> list v의 시작 iterator를 반환
+v.end() -> list v의 마지막 iterator를 반환
+push_front(1) -> 리스트 맨 앞에 원소1 추가
+pop_front(): 리스트 맨 앞 원소 삭제
+push_back(1): 리스트 맨 뒤에 원소1 추가
+pop_back(): 리스트 맨 뒤 원소 삭제
+insert(iterator, 1): iterator가 가리키는 부분 앞에 원소1을 추가
+erase(iterator): iterator가 가리키는 부분의 원소 삭제
+*iterator: iterator가 가리키는 원소에 접근
+front(): 첫번째 원소를 반환
+back(): 마지막 원소를 반환
+empty(): 리스트가 비어있으면 true(1) 아니면 false(0)를 반환
+size(): 리스트 원소들의 수를 반환
+
+vector 와 비슷한 형식이다.
+begin,end -> iterator 형식
+size -> type_size 형식
