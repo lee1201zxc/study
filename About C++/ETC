@@ -1,0 +1,4 @@
+ios::sync_with_stdio(false);
+	cin.tie(0);
+    -> 쓰면 입출력속도 좀 빨라짐 
+#include <bits/stdc++.h> -> 많이 쓰이는 헤더들 모아둠 (대회에서 유용)
