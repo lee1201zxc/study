@@ -15,6 +15,7 @@ STL vector
 vector<int> v; -> 비어있는 int형 vector v를 생성
 vector<int> v(5); -> 0으로 초기화된 원소를 5개 가지는 vector v를 생성
 vector<int> v(5, 2); -> 2로 초기화된 원소를 5개 가지는 vector v를 생성
+vector<int> v={1,2,3,4}; -> 1,2,3,4 원소를 가지는 vector v를 생성
 vector<vector<int>> v({1,2,3},{2,3,4}); -> 2차원 vector v 생성
 vector<int> v2(v1); -> vector v2는 vector v1을 복사하여 생성
 v.assign(10, 1); -> vector v에 1의 값을 가진 원소10개 할당 *v(5, 2)과 비슷한거 같지만 이거는 생성이 아닌 초기화
@@ -34,13 +35,13 @@ v.capacity(); -> 할당된 공간의 크기 리턴 size와 다름
 v2.swap(v1); -> v2와 v1의 원소와 capacity를 바꿔준다.  *vector<int>().swap(v1); -> 메모리 해제(v1의 capacity없앰)
 v.insert(주소 값a, 3); -> a 위치에 3삽입(뒤의 원소는 뒤로 밀려남) *주소 값a는 배열마냥 숫자로 쓰면 안되고 v.begin()+3이런 식으로 접근
 v.insert(주소 값a, 3, 4); -> a 위치에 3개의 4를 삽입(뒤의 원소는 뒤로 밀려남)
-v.erase(iter); iter가 가리키는 원소 제거 size만 줄고 capacity는 그대로 2개 인자로 주면 그 사이 범위 모두 제거
+v.erase(iter); iter가 가리키는 원소 제거(주소) size만 줄고 capacity는 그대로 2개 인자로 주면 그 사이 범위 모두 제거
 v.empty() -> vector v가 비었으면 true리턴 (size가0일경우)
 
 
 size_type -> 원소의 개수 형식
     for(vector<int>::size_type i=0; i<v.size(); i++)
-        cout<<v[i]<<endl;   //모든 원소 출력
+        cout<<v[i]<<endl;   //모든 원소 출력,vector<int>::size_type 안쓰고 v.size()앞에(int)붙여서 형 바꿔도 가능
         
 iterator -> 반복자 형식
     for(vector<int>::iterator a=v.begin(); a!=v.end();a++)
@@ -48,3 +49,9 @@ iterator -> 반복자 형식
         
 reverse_iterator -> 역 반복자 형식
 value_type -> 원소의 형식  
+
+
+
+ios::sync_with_stdio(false);
+	cin.tie(0);
+    -> 쓰면 입출력속도 좀 빨라짐 
