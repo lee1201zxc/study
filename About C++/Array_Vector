@@ -10,6 +10,15 @@ STL vector
 3.메모리 heap에 생성되며 동적할당된다.
 4.배열에 비해 속도가 느리지만 편리하다.
 
+시간 복잡도
+
+임의의 위치에 있는 원소를 확인/변경 O(1) 
+원소 끝에 추가 O(1)  (push_back)
+마지막 원소 삭제 O(1)  (pop_back)
+임의의 위치에 있는 원소 추가/삭제 O(N)  (insert,erase)
+
+
+
 일단 #include<vector>로 헤더파일 추가
 
 vector<int> v; -> 비어있는 int형 vector v를 생성
