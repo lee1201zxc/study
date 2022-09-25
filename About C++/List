@@ -1,7 +1,10 @@
 #include<list>를 추가하여 사용
 *양방향 연결 리스트로 구현 되어 있음.
 
+시간 복잡도
 
+k번째 원소 확인/변경 O(k)
+임의의 위치에 원소 추가/제거(주소 알아야함) O(1)  (insert,erase)
 
 list<int> v; list v생성
 v.begin() -> list v의 시작 iterator를 반환
