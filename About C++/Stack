@@ -1,0 +1,19 @@
+스택
+한쪽으로만 원소를 넣다 뺄 수 있다.
+FILO(First In Last Out) : 먼저 들어간게 가장 나중에 나옴
+
+시간 복잡도 
+
+원소 추가/제거 O(1)
+원소 확인(맨 위에거) O(1)
+
+
+일단 #include<stack>을 헤더파일 포함
+
+stack<int> v; -> int형 stack인 v를 선언
+v.push(1) -> 스택 v에 1추가(top 다음에)
+v.pop(1) -> 스택 v에 1삭제(top데이터)  *비어있을 때 호출시 에러
+v.top() -> 스택 v의 최상위 데이터 반환  *pop과 같은 에러
+v.size() -> 스택 v의 크기(사이즈) 반환
+v.empty() -> 비어있으면 true(1) 아니면 false(0)
+swap(v1,v1) -> 스택 v1 과 v2 내용 바꾸기
