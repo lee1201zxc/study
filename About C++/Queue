@@ -1,0 +1,22 @@
+큐
+한쪽으로 원소를 넣고 반대쪽으로 꺼낼 수 있다.
+FIFO(First In First Out) : 먼저 들어간게 먼저 나온다.
+한쪽(rear)에서는 삽입만 되고 다른 한쪽(front)에서는 삭제만 된다.
+
+
+시간 복잡도
+
+원소 추가/제거 O(1)
+맨 앞, 맨 뒤 원소 확인 O(1)
+
+
+일단 #include<queue>로 헤더파일 포함
+
+queue<int> v; -> int형 queue인 v를 선언
+v.push(1) -> queue v에 1추가(rear로)
+v.pop() -> queue v의 front데이터 삭제
+v.front() -> 가장 최상위 데이터(front)반환
+v.back() -> 가장 최하위 데이터(rear)반환
+v.size() -> 큐의 사이즈 반환
+v.empty() -> 큐가 비어있으면 true(1) 아니면 false(0) 반환
+swap(v1, v2) -> 두 큐의 내용 바꿈
