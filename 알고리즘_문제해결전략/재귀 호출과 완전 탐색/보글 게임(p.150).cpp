@@ -35,4 +35,4 @@ int main(void)
         cout<<word<<"는 존재X\n";
 }
 
-//board, word, Y,X변수를 
+//board, word, Y,X변수를 바꿔주세요.
