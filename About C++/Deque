@@ -1,0 +1,41 @@
+덱(Deque)
+스택과 큐를 합친 자료구조로
+양쪽으로 자료를 삽입,삭제 할 수 있다.
+
+
+시간 복잡도
+
+원소 추가/삭제 O(1)
+맨 앞, 맨 뒤 원소 확인 O(1)
+STL stack, queue와는 다르게 맨 앞, 맨 뒤가 아닌 원소들도 접근이 가능하다.
+
+
+
+일단 #include<deque>로 헤더파일 포함
+
+deque<int> v;
+deque<int> v(10);
+deque<int> v(10,2);
+deque<int> v1(v2);
+--->> int형 deque v생성하는 코드들 (vector와 동일)
+
+v.assign(5,2) -> 2의값으로 5개원소 할당
+v.at(idx); -> idx번째 원소를 참조(데이터 값 리턴)
+v[idx]; -> idx번째 원소를 참조 *at보다 속도 빠름 but 안전x
+v.front(); -> 첫번째 원소를 참조
+v.back(); -> 마지막 원소를 참조
+v.clear(); -> 모든 원소 제거 *메모리는 남아있음
+v.push_front(2); -> 첫 번째 원소 앞에 2를 추가한다.(삽입)
+v.pop_front(); -> 첫 번째 원소를 제거한다.
+v.push_back(2); -> 마지막 원소 뒤에 2를 추가한다.(삽입)
+v.pop_back(); -> 마지막 원소를 제거
+v.begin(); -> 첫번째 원소를 가리킴 (반복자(iterator)와 사용)
+v.end(); -> 마지막 원소를 가리킴 (반복자(iterator)와 사용)
+v.resize(n); -> deque v크기를 n으로 변경, 더 커지면 0으로 초기화
+v.resize(n,3); -> deque v크기를 n으로 변경, 더 커지면 3으로 초기화
+v.size(); -> 원소의 갯수 리턴
+v2.swap(v1); -> v2와 v1의 원소와 capacity를 바꿔준다.  *deque<int>().swap(v1); -> 메모리 해제(v1의 capacity없앰)
+v.insert(주소 값a, 3); -> a 위치에 3삽입(뒤의 원소는 뒤로 밀려남) *주소 값a는 배열마냥 숫자로 쓰면 안되고 v.begin()+3이런 식으로 접근
+v.insert(주소 값a, 3, 4); -> a 위치에 3개의 4를 삽입(뒤의 원소는 뒤로 밀려남)
+v.erase(iter); iter가 가리키는 원소 제거(주소) size만 줄고 capacity는 그대로 2개 인자로 주면 그 사이 범위 모두 제거
+v.empty() -> 비어있으면 true(1) 아니면 false(0)반환
