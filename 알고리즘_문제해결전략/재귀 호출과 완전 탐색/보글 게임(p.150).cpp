@@ -34,3 +34,5 @@ int main(void)
     else
         cout<<word<<"는 존재X\n";
 }
+
+//board, word, Y,X변수를 
