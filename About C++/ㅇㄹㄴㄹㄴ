@@ -1,0 +1,22 @@
+#include <iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+int main()
+{
+	vector<pair<string,double>> v;
+	int n,k;
+	cin>>n>>k;
+	for(int i=0; i<n; i++)
+	{
+		string s;
+		double b;
+		pair<string,double> a;
+		cin>>s>>b;
+		a=make_pair(s,b);
+		v.push_back(a);
+	}
+	sort(v.begin(),v.begin()+n);
+	cout.precision(2);
+	cout<<v[k-1].first<<' '<<v[k-1].second;
+}
