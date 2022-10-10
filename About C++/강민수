@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int n,m,h=0;
+    scanf("%d %d", &n, &m);
+    int a[m],b[10][2],c[10][2],bb[n+1]={0,},cc[n+1]={0,},dd[n+1]={0,}; //b,c->열정보,bb,cc->거기 강인지
+    for(int i=0; i<m; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    for(int z=0; z<a[0]/2; z++)
+    {
+        scanf("%d %d", &b[z][0],&b[z][1]);
+        for(int i=b[z][0]; i<=b[z][1]; i++)
+            bb[i]=1;
+    }
+    for(int i=1; i<m; i++)
+    {
+        for(int z=0; z<a[i]/2; z++)
+        {
+            int k=0;
+            scanf("%d %d", &c[z][0],&c[z][1]);
+            for(int x=c[z][0]; x<=c[z][1]; x++)
+            {
+                if(bb[x]==1)
+                {
+                    k=1;
+                    break;
+                }
+            }
+            if(k==1)
+            {
+                for(int x=c[z][0]; x<=c[z][1]; x++)
+                    cc[x]=1;
+            }
+        }
+        for(int x=0; x<10; x++)
+        {
+            b[x][1]=c[x][1];
+            b[x][0]=c[x][0];
+        }
+        memcpy(bb,cc,sizeof(cc));
+        memcpy(cc,dd,sizeof(dd));
+    }
+    for(int i=1;i<=n; i++)
+    {
+        if(bb[i]==1)
+        {
+            h=1;
+            break;
+        }
+    }
+    if(h==1)
+        printf("YES");
+    else
+        printf("NO");
+}
