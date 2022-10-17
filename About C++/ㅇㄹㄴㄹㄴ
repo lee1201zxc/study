@@ -1,22 +1,27 @@
 #include <iostream>
-#include<algorithm>
-#include<vector>
 using namespace std;
 int main()
 {
-	vector<pair<string,double>> v;
-	int n,k;
-	cin>>n>>k;
+	int n,a[200001]={0,},b[200001]={0,},x=0;
+	cin>>n;
 	for(int i=0; i<n; i++)
 	{
-		string s;
-		double b;
-		pair<string,double> a;
-		cin>>s>>b;
-		a=make_pair(s,b);
-		v.push_back(a);
+		int k;
+		cin>>k;
+		if(k>0)
+			a[k]=1;
+		else
+		{
+			k*=-1;
+			b[k]=1;
+		}
 	}
-	sort(v.begin(),v.begin()+n);
-	cout.precision(2);
-	cout<<v[k-1].first<<' '<<v[k-1].second;
+	for(int i=1; i<200001; i++)
+	{
+		if(a[i]==1&&b[i]==0)
+			x+=i;
+		else if(a[i]==0&&b[i]==1)
+			x-=i;
+	}
+	cout<<x;
 }
