@@ -17,3 +17,6 @@ pair<int,int> p={1,2}; ->이것도 만드는거
 algorithm에 있는 sort 를 이용해 pair를 이용해 정렬시 첫 번째 인자(first)를 기준으로 정렬하고
 첫 번째 인자 값이 같으면 두 번째 인자 값을 이용해 정렬한다.
 ex) sort(p.begin(),p.end());
+
+vector에 pair 넣기-> vector<pair<int,int>> v;
+그리고 vector 추가시 v.push_back(make_pair(1,2)) OR v.push_back(pair<int,int>(1,2)); 이렇게 추가
