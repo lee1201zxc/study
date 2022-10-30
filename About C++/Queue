@@ -16,7 +16,7 @@ queue<int> v; -> int형 queue인 v를 선언
 v.push(1) -> queue v에 1추가(rear로)
 v.pop() -> queue v의 front데이터 삭제
 v.front() -> 가장 최상위 데이터(front)반환
-v.back() -> 가장 최하위 데이터(rear)반환
+v.back() -> 가장 최하위 데이터(rear)반환 ->스택기준top
 v.size() -> 큐의 사이즈 반환
 v.empty() -> 큐가 비어있으면 true(1) 아니면 false(0) 반환
 swap(v1, v2) -> 두 큐의 내용 바꿈
