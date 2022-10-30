@@ -1,0 +1,2 @@
+BFS(Breadth First Search) : 너비 우선 탐색
+그래프나 트리에서 노드를 방문하는 방법중 하나.
