@@ -1,0 +1,45 @@
+//문제 링크 : https://www.acmicpc.net/problem/11724
+//그래프에서 연결된 요소(Connected Component)를 찾는 문제 (몇개의 모임으로 이루어져 있는지)
+
+#include <iostream>
+#include<utility>
+#include<queue>
+using namespace std;
+int main()
+{
+    int n,m,d=0;
+    cin>>n>>m;
+    int a[n][n],b[n];
+    fill(a[0],a[0]+n*n,0);
+    fill_n(b,n,0);
+    for(int i=0; i<m; i++)
+    {
+        int x,y;
+        cin>>x>>y;
+        a[x-1][y-1]=a[y-1][x-1]=1;
+    }
+    for(int i=0; i<n; i++)
+    {
+        queue<int> v;
+        if(b[i]==0)
+        {
+            d++;
+            v.push(i);
+            b[i]=1;
+            while(!v.empty())
+            {
+                int p=v.front();
+                v.pop();
+                for(int z=0; z<n; z++)
+                {
+                    if(a[p][z]==1&&b[z]==0)
+                    {
+                        b[z]=1;
+                        v.push(z);
+                    }
+                }
+            }
+        }
+    }
+    cout<<d;
+}
