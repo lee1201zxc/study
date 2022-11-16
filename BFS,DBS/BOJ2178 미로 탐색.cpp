@@ -1,5 +1,5 @@
 //문제 링크 : https://www.acmicpc.net/problem/2178
-//BFS를 이용한 문제
+//2차원 배열에서의 BFS를 이용한 문제
 
 #include <iostream>
 #include<queue>
