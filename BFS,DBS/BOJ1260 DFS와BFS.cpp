@@ -1,3 +1,6 @@
+//문제 링크 : https://www.acmicpc.net/problem/1260
+//DFS,BFS를 모두 구현해 볼 수 있는 문제
+
 #include <iostream>
 #include<stack>
 #include<queue>
