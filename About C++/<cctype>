@@ -1,0 +1,12 @@
+판별하기 위한 여러 함수들이 존재
+isalnum()	-> 알파벳이거나 10진수 해당하는 문자면 1 아니면 0
+isalpha()	-> 알파벳이면 1
+isblank()	-> space이거나 tab이면 1
+isdigit()	-> 숫자(0~9)이면 1
+isxdigit()	-> 16진수에 사용되는 숫자(0~9,A~F)이면 1
+islower()	-> 소문자이면 1
+isupper()	-> 대문자이면 1
+isspace()	-> 빈칸이면 1
+ispunct()	-> punctuation 쉼표(,) 마침표(.) 등의 문장기호면 1
+tolower()()	-> 소문자로 바꾸어주는 함수
+toupper()	-> 대문자로 바꾸어주는 함수
