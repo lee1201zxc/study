@@ -11,7 +11,7 @@ unordered_map<int,int> v; -> 생성
 v[i] -> i번째 원소 참조
 v.clear() -> 모든 원소 삭제
 v.insert(make_pair(key,value)) -> key,value 값 추가
-v.find(key) -> key값을 가진 원소 찾음.
+v.find(key) -> key값을 가진 원소 찾음. 못찾으면 end를 
 v.count(key) -> 특정 key값을 가지는 원소의 개수
 v.size()-> 원소의 갯수 리턴 
 v.empty() -> 비어있는지 확인
