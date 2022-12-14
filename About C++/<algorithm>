@@ -9,3 +9,5 @@ copy(a,a+n, b); a~a+n까지 값을 b에 복사(배열)
 
 find(a,b,10) -> a에서 b까지중 10이 나오는 곳을 찾는다.(처음으로)
 ex-> p=find(a,b,10);
+
+reverse(a.begin(),a.end()) 배열 a 뒤집기
