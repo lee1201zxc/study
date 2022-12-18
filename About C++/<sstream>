@@ -1,0 +1,14 @@
+# include <sstream>
+주어진 문자열에서 필요한 자료형에 맞는
+정보를 꺼낼 때 유용하게 사용
+
+# 용어 정리
+- stream : 실제 입력이나 출력이 표현된 데이터의 이상화된 흐름, 운영체제가 입력과 출력을 다루기 위한 중간다리 역할
+- buffer : 스트림 내부의 임시 메모리 공간, 이를 이용하면 입출력을 효율적으로 처리할 수 있다.
+
+string s = "abc 12 edf ghi";
+stringstream ss(s);                    // stringstream ss; ss.str(s); 와 같음
+string token;                          // 버퍼를 저장할 string
+
+// string에서 공백을 기준으로 string을 뽑아내는 예시
+while(ss >> token) cout << token << endl;
