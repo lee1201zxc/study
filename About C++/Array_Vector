@@ -42,6 +42,7 @@ v.resize(n,3); -> vector v크기를 n으로 변경, 더 커지면 3을 초기화
 v.size(); -> 원소의 갯수 리턴
 v.capacity(); -> 할당된 공간의 크기 리턴 size와 다름 
 v2.swap(v1); -> v2와 v1의 원소와 capacity를 바꿔준다.  *vector<int>().swap(v1); -> 메모리 해제(v1의 capacity없앰)
+swap(v1,v2) -> 위와 동일
 v.insert(주소 값a, 3); -> a 위치에 3삽입(뒤의 원소는 뒤로 밀려남) *주소 값a는 배열마냥 숫자로 쓰면 안되고 v.begin()+3이런 식으로 접근
 v.insert(주소 값a, 3, 4); -> a 위치에 3개의 4를 삽입(뒤의 원소는 뒤로 밀려남)
 v.erase(iter); iter가 가리키는 원소 제거(주소) size만 줄고 capacity는 그대로 2개 인자로 주면 그 사이 범위 모두 제거
