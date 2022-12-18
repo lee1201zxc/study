@@ -1,2 +1,0 @@
-헤더파일 string.h , cstring 둘다 가능
-문자열 비교 -> strcmp(a,b), string 에선 a.compare(b)도 가능
