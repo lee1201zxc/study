@@ -48,7 +48,7 @@ ex)
 				<col style="background-color:#eee;">
 				<col>
 				<col span="2" style="width:150px;">
-      </colgroup>
+			</colgroup>
 -> 4개의 열이고 1열은 배경색 바꾸기, 2열은 아무 것도 지정안함, 3열과4열은 너비 지정.
 
 
