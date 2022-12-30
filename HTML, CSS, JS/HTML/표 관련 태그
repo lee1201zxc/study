@@ -1,0 +1,44 @@
+
+표는 <table> 태그로 만들며 <tr>로 행을, <td>로 각행의 셀을 나타냄.
+<th>는 <td>와 같으나 안의 내용이 진하게 표시되고 중앙에 정렬되서제목 행에 셀을 만들 때 사용됨.
+
+ex)
+<table>
+  <tr>
+    <th> ~ </th>
+    <th> ~ </th>
+    <th> ~ </th>
+  </tr>
+  <tr>
+    <td> ~ </td>
+    <td> ~ </td>
+    <td> ~ </td>
+  </tr>
+</table>
+
+-> 2행, 3열의 테이블을 만든 것.
+
+
+<caption> ~ </> ->  <table>태그 바로 아래 쓰면 안의 내용이 제목으로 지정되며 표의 가장 위쪽 중앙에 표시됨.
+
+
+▶표의 구조를 지정하는 태그 무리
+┏<thead> -> 표의 머리 부분(제목) 지정.
+┃<tbody> -> 표의 본문 부분 지정.
+┗<tfoot> -> 표의 요약 부분 지정.
+-> 지정 했을 때 장점
+  1. 화면 낭독기통해 표 쉽게 이해 가능
+  2. CSS를 사용에 표의 각각 부분에 다른 스타일 적용 가능.
+  3. <thead>, <tfoot> 부분은 고정하고 <tbody>만 스크롤 하도록 만들 수 있다.
+
+
+▶행이나 열 합치는 속성들
+┏ rowspan="n" -> 행을 n개 합친다.(아래로)
+┗ colspan="n" -> 열을 n개 합친다.(오른쪽으로)
+<td>, <th> 태그에서 사용
+ex) <td rowspan="2"> ~ </td>
+
+
+
+★ width="90%" cellpadding="5" cellspacing="0" border="1" align="center" style="border-collapse:collapse; border:1px gray solid;"
+-> 현재 이걸 <table>에 추가해줘야 테이블 테두리가 생김. 설정 살짝바꿔서 사용
