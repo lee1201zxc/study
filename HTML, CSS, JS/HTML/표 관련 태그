@@ -39,6 +39,18 @@ ex)
 ex) <td rowspan="2"> ~ </td>
 
 
+▶열을 묶어 주는 태그들
+  <colgroup> ~ </> 생성후 안에 열의 개수만큼 <col>을 넣어줌
+  아무 속성 지정 안해도 <col>추가
+  연속되는 열이 같은 스타일 속성을 가질 경우 <col>안에 span="n"속성을 적어서 묶을 수 있음.
+ex)
+			<colgroup>
+				<col style="background-color:#eee;">
+				<col>
+				<col span="2" style="width:150px;">
+      </colgroup>
+-> 4개의 열이고 1열은 배경색 바꾸기, 2열은 아무 것도 지정안함, 3열과4열은 너비 지정.
+
 
 ★ width="90%" cellpadding="5" cellspacing="0" border="1" align="center" style="border-collapse:collapse; border:1px gray solid;"
 -> 현재 이걸 <table>에 추가해줘야 테이블 테두리가 생김. 설정 살짝바꿔서 사용
