@@ -1,4 +1,4 @@
-▶이미지 삽입태그 : <img>
+▶이미지 삽입 태그 : <img>
 ●세부 속성
 src -> 이미지 파일의 경로
 alt -> 화면 낭독기 혹은 이미지 표시 불가능 할경우 대체할 텍스트
@@ -10,3 +10,30 @@ ex) <img src="image/apple.jpg" alt="사과">
 ★사용할 수 있는 조정 방법이 두가지가 있음
   1.퍼센트(%)    ex)width="50%" -> 웹 브라우저 창의 크기를 기준으로 지정
   2.픽셀(px)     ex)width="50" -> 픽셀 크기로 지정
+  
+  
+▶멀티미디터 삽입 태그 : <object>, <embed>
+이미지, 오디오, 비디오, PDF파일등을 삽입 가능
+
+★ <embed>는 닫는 태그가 없음. <object>은 있음.
+
+ex)
+<object data="./images/video.mp4"> </object>
+<embed src="./images/video.mp4">
+
+
+▶비디오, 오디오 삽입 태그 : <video>, <audio>
+
+ex)
+<video src="./images/video.mp4"> </vedio>
+<video src="./images/video.mp4"> </vedio>
+
+●속성
+controls -> 화면에 컨트롤 바 표시
+autoplay -> 자동 실행
+loop -> 반복 재생
+muted -> 소리 제거
+proload -> 페이지 불러올 시 어떻게 로딩할 것인지 지정(auto, metadata, none)
+width -> 너비 지정 <img>와 동일
+height -> 높이 지정
+poster -> 동영상 재생전까지 화면 뭘로할지 지정(썸네일) ex) poster="a.jpg"
