@@ -3,6 +3,70 @@
 
 ▶<form> </> -> 폼을 만드는 태그
 
- ●form의 속성
- method
+●form의 속성
+ method -> 사용자가 입력한 내용 어떻게 서버에 넘겨줄 것인지 지정
+           get : 256~4096byte까지만 넘길 수 있으며 주소 표시줄에 사용자가 입력한 내용이 그대로 나옴(보안에 취약)
+           post : 입력 내용 제한이 없고 사용자 입력 내용도 드러나지 않음.
+ name -> 폼의 이름을 지정
+ action -> 데이터를 서버로 보낼 때 보낼 주소지정
+ target -> action에서 지정한 파일을 새창에서 열도록 지정
+ autocomplete -> 자동 완성 기능, 기본 값은 on 이며 off를 통해 끌 수 있음
+
+
+▶<fieldset> </> , <legend> </> -> 폼 요소를 묶어 그룹으로 만드는 태그들
+
+<fieldset> </> -> form 태그 안에 사용하며 그룹을 지정할 수 있다.
+<legend> </> -> <fieldset>으로 묶은 그룹에 이름을 지정할 수 있다.
+
+ex)
+<form action="">
+ <fieldset>
+  <legend>상품 선택</legend>
+  상품 A : <input type~>
+  상품 B : <input type~>
+ </fieldset>
+</form>
+
+
+▶<label> </> -> 폼 요소에 레이블 붙이는 태그(입력란 옆에 텍스트를 만드는태그, 뭘 입력하는지 알 수 있게함) 안써도 되나 쓰면 웹 브라우저가 쉽게 알 수 있음
+
+ex1)
+<label>아이디<input type="text"> </label>
+
+ex2)
+<label for="idd">아이디</label>
+<input type="text" id="idd">
+
+
+▶<input> -> 사용자가 입력할 수 있는 공간을 만드는 태그 (닫는 태그가 없다)
+
+●세부 속성들
+ text -> 한 줄짜리 텍스트 입력 가능한 박스 넣음
+ password -> 텍스트와 같지만 입력한 문자가 '●'로 표시됨
+ search -> 검색할 때 입력하는 필드 넣음(text와 같음)
+ url -> URL주소 입력할 때 쓰는 필드
+ email -> 이메일 주소 입력할 때 쓰는 필드
+ tel -> 전화번호 입력할 수 있는 필드
+ checkbox -> 여러 항목 중복 선택 가능한 네모난 체크 박스 넣음
+ radio -> 여러 항목중 1개만 선택할 수 있는 동그란 버튼 넣음
+ number -> 숫자만 입력 가능한 필드
+ range -> 숫자 조절할 수 있는 슬라이드 막대를 넣음
+ date -> 날짜(연, 월, 일) 를 넣음
+ month -> 날짜(연, 월) 를 넣음
+ week -> 날짜(연, 주) 를 넣음
+ time -> 날짜(시, 분, 초) 를 넣음
+ datetime -> 국제표준시로 설정된 날짜와 시간을 넣음
+ datetime-loca -> 사용자 지역 기준 날짜와 시간 넣음
+ submit -> 전송버튼 넣음
+ reset -> 리셋버튼 넣음
+ image -> submit 대신 사용할 이미지 넣음
+ button -> 일반 버튼을 넣음
+ file -> 파일 첨부 가능한 버튼 넣음
+ hidden -> 사용자에게는 안보이지만 서버로 넘겨주는 값이 있는 필드를 생성
  
+ 
+
+
+https://www.nextree.co.kr/p8428/
+
+https://365kim.tistory.com/64
