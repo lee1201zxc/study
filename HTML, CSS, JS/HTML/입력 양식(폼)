@@ -86,8 +86,15 @@ ex2)
    ○ value -> 버튼에 표시할 내용
 
  image -> submit 대신 사용할 이미지 넣음
- button -> 일반 버튼을 넣음
+  ex) <input type="image" src="" alt="">
+  
+ button -> 일반 버튼을 넣음, 주로 버튼을 클릭해서 자바스크립트 실행할 때 사용
+  ○ value -> 버튼에 표시할 내용
+  ex) <input type="button" value="창 열기" onclick="window.open('a.html')">
+  
  file -> 파일 첨부 가능한 버튼 넣음
+ 
  hidden -> 사용자에게는 안보이지만 서버로 넘겨주는 값이 있는 필드를 생성
+  ○ value -> 서버로 넘길 값, name -> 이름
  
  
