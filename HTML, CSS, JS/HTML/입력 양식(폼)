@@ -1,7 +1,7 @@
 폼 : 사용자가 입력한 정보를 서버, 다른 페이지로 보낼 수 있게 한다.
 
 
-▶<form> </> -> 폼을 만드는 태그로 다른 태그들의 부모격으로 생각하면 된다.
+▶<form> </> -> 폼을 만드는 태그로 다른 태그들의 부모격으로 생각하면 된다. (입력내용 제출시 submit 과 같은 form 안에 있는 것들이 제출된다.
 
 ●form의 속성
  method -> 사용자가 입력한 내용 어떻게 서버에 넘겨줄 것인지 지정
@@ -50,6 +50,8 @@ ex2)
     placeholder -> 필드안에 미리 입력될 내용 지정, 하지만 흐리게 표시되며 문자 입력시 사라짐
     maxlength -> 최대 몇글자까지 입력 할 수 있는지 지정
     autofocus -> 쓰면 커서가 자동으로 필드안으로 들어감(클릭한 것처럼)
+    readonly -> 읽기 전용, 사용자가 입력 못함
+    required -> 필수로 입력해야 하는 부분에 쓰면 입력안하면 오류 메시지 뜸
     
  search -> 검색할 때 입력하는 필드 넣음(검색을 위한 필드로 인식하며 모바일 웹 브라우저에선 검색어 입력시 오른쪽에 X표시가 떠서 검색어를 바로 지울 수 있다.)
  url -> URL주소 입력할 때 쓰는 필드(입력값이 형식이 올바르지 않으면 오류 메시지가 뜸)
@@ -98,3 +100,42 @@ ex2)
   ○ value -> 서버로 넘길 값, name -> 이름
  
  
+▶ 폼에서 사용하는 여러 다른 태그들
+
+<textarea> -> 텍스트의 상위버전? 여러줄 입력가능, 게시판에서 글 입력시 주로 사용
+   ○cols -> 텍스트 영역의 너비 지정
+   ○rows -> 텍스트 영역의 세로 길이 지정
+   
+   
+<select>, <option> -> 드롭다운 목록을 만드는 태그들
+
+ex)
+<select>
+   <option value="1">1</option>
+   <option value="2">2</option>
+</select>
+
+<select>의 속성
+  size -> 화면에 표시할 드롭다운 항목의 개수  지정
+  multiple -> 둘 이상의 항목 표시할 때 사용
+<option>의 속성
+  value -> 해당 항목 선택시 서버로 넘겨줄 값 지정
+  selected -> 드롭다운 메뉴 삽입시 기본적으로 선택해서 보여줄 항목
+  
+  
+<datalist>, <option> -> 데이터 목록 만들어 주는 태그 value값이 텍스트 필드에 나타남
+
+ex)
+<input type="text" list="dd">
+<datalist id="dd">
+   <option value=""> </>
+   <option value=""> </>
+</datalist>
+
+
+
+<button> -> 버튼 만들어 주는 태그
+  type 속성
+     submit -> <input type="submit">과 동일
+     reset -> input type="reset" 과 동일
+     button -> input type="button"과 동일
