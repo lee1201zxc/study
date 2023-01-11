@@ -1,0 +1,26 @@
+CSS = Cascading Style Sheets
+웹 문서를 꾸밀 때(디자인) 사용.
+
+
+●기본 형식
+선택자 {
+  속성 : 속성값;
+  속성 : 속성값;
+}
+
+
+
+●사용자 스타일
+
+  ○인라인 스타일 : 간단한 스타일이라면 스타일 시트를 사용하지 않고 적용할 대상에 직접 표시하는 방식
+    ex) <p style="color : blue"> 예제 </p>
+    
+  ○내부 스타일 시트 : 웹 문서에서 사용할 시트를 같은 문서에 정리한 것, <head>안에서 정의하고 <style>~</style>안에서 작성
+    ex) <style> p{ color : blue; } </style>
+    
+  ○외부 스타일 시트 : 여러 웹 문서에서 사용할 스타일을 지정할 때 사용하는 방식, css파일에 작성한다.
+                     <link rel="stylesheet" href="외부 스타일 시트 경로"> -> html 파일 head부분에 추가
+
+
+
+http://cssminifier.com/ -> 작성한 css문서에서 줄일 부분을 줄여 용량을 줄여주는 사이트
