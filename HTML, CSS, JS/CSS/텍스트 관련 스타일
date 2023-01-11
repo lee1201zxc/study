@@ -1,0 +1,11 @@
+font-family -> 글꼴 지정 속성
+  ex) body { font-family : "맑은 고딕", 돋움, 굴림 } -> body태그에 넣으면 문서 전체에 적용,
+      두 단어 이상은 큰따옴표로 쓰기 글꼴이 없을 가능성도 있으므로 대체재여러개 쓰기도 가능.
+      
+font-size -> 글자 크기 지정
+  ●
+font-style -> 이텍릭체 표시
+  ●normal -> 기본 ●italic -> 이텔릭체 ●oblique -> 기울어진 글자
+  
+font-weight -> 글자 굵기 지정
+  ●normal -> 기본(400) ●bold -> 굵게(700) ●bolder -> 더 굵게 ●lighter -> 더 가늘게 ●100~900 -> 굵기 표현 숫자 클수록 굵음.
