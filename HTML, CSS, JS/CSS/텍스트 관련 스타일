@@ -1,23 +1,66 @@
-font-family -> 글꼴 지정 속성
+◆글꼴 관련 스타일
+
+▶font-family -> 글꼴 지정 속성
   ex) body { font-family : "맑은 고딕", 돋움, 굴림 } -> body태그에 넣으면 문서 전체에 적용,
       두 단어 이상은 큰따옴표로 쓰기 글꼴이 없을 가능성도 있으므로 대체재여러개 쓰기도 가능.
       
-font-size -> 글자 크기 지정
+▶font-size -> 글자 크기 지정
   ●em -> 부모 요소에서 지정한 글꼴의 대문자 M의 너비를 1em으로 두고 비율 정함.
   ●rem -> 문서 시작 부분에서 정한 크기를 1rem으로 두고 비율 정함.
   ●ex -> 해당 글꼴의 소문자 x의 높이를 1ex로 두고 비율 정함.
   ●px -> 모니터의 1픽셀을 1px로 두고 비율 정함.
   ●pt -> 포인트라고 한다.
   
-font-style -> 이텍릭체 표시
+▶font-style -> 이텍릭체 표시
   ●normal -> 기본
   ●italic -> 이텔릭체
   ●oblique -> 기울어진 글자(italic과 사실상 같음)
   
-font-weight -> 글자 굵기 지정
+▶font-weight -> 글자 굵기 지정
   ●normal -> 기본(400)
   ●bold -> 굵게(700)
   ●bolder -> 더 굵게
   ●lighter -> 더 가늘
   ●100~900 -> 굵기 표현 숫자 클수록 굵음.
 
+
+▶웹 문서에 구글 폰트 넣기
+  1.fonts.google.com 에서 원하는 폰트 찾기
+  2. Select this style 선택 후 @import~, font-family:~ 두개 복사
+  3.<style> 태그안에 @import넣고 적용할 태그or스타일 안에 font-family넣기
+ 
+ 
+◆텍스트 관련 스타일
+
+▶color -> 글자색 지정
+  ● 16진수표기법  -> ex) #RRGGBB 
+  ● hsl,hsla표기법  -> hue(색상), saturation(채도), lightness(명도) + alpha(불투명도)를 나타냄 ex) hsl(0,100%,50%), hsla(0,100%,50%,0.5)
+  ● rgb,rgba표기법 -> ex) rgb(0,0,255), rgba(0,0,255,0.5)
+  
+▶text-align -> 텍스트 정렬 방법 지정
+  ●start : 현재 텍스트 줄 시작 위치에 맞춰 정렬
+  ●end : 현재 텍스트 줄 끝 위치에 맞춰 정렬
+  ●left : 왼쪽에 맞춰 정렬
+  ●right : 오른쪽에 맞춰 정렬 
+  ●center : 가운데 맞춰 정렬
+  ●justify : 양쪽에 맞춰 정렬
+  ●match-parent : 부모 요소 따라 정렬
+  
+▶line-height -> 줄 간격 조정
+  ex) line-height : 24px or 2.0 or 200%
+   ●텍스트 세로로 가운데 정렬 하기 -> line-height 와 height 속성 값을 동일하게 지정
+
+▶text-decoration -> 텍스트 줄 표시 혹은 제거
+  ●none -> 줄 제거
+  ●underline -> 밑줄 표시
+  ●overline -> 윗줄 표시
+  
+▶text-shadow -> 텍스트에 그림자 효과 추가
+  ●text-shadow: <가로 거리> <세로 거리> <번짐 정도> <색상>
+  ex) text-shadow: 5px 5px 3px black;
+
+▶text-tranform -> 텍스트 대소 문자 변환
+  ●capitalize -> 첫 번째 글자 대문자로 변환
+  ●uppercase -> 모든 글자 대문자로
+  ●lowercase -> 모든 글자 소문자로
+  ●full-width -> 가능한 모든 문자 전각 문자로 변환
