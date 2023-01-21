@@ -36,6 +36,7 @@
   ● 16진수표기법  -> ex) #RRGGBB 
   ● hsl,hsla표기법  -> hue(색상), saturation(채도), lightness(명도) + alpha(불투명도)를 나타냄 ex) hsl(0,100%,50%), hsla(0,100%,50%,0.5)
   ● rgb,rgba표기법 -> ex) rgb(0,0,255), rgba(0,0,255,0.5)
+  ->color picker 사용하면 편리
   
 ▶text-align -> 텍스트 정렬 방법 지정
   ●start : 현재 텍스트 줄 시작 위치에 맞춰 정렬
