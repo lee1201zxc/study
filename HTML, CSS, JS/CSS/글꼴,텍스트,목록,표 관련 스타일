@@ -65,3 +65,6 @@
   ●uppercase -> 모든 글자 대문자로
   ●lowercase -> 모든 글자 소문자로
   ●full-width -> 가능한 모든 문자 전각 문자로 변환
+  
+▶letter-spacing, word-spacing -> 글자, 단어 사이의 간격 조정
+  ●px,em 같은 단위를 사용하여 조정
