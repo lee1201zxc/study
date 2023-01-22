@@ -40,3 +40,13 @@ ex)
 ◆테두리 스타일 지정
 
 ▶border-style -> 테두리 스타일을 지정한다.
+  ●none -> 기본값
+  ●hidden -> 테두리를 감춘다.
+  ●solid ->
+  ●dotted ->
+  ●dashed ->
+  ●double ->
+  ●groove ->
+  ●inset ->
+  ●outset ->
+  ●ridge ->
