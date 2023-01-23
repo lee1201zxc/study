@@ -1,0 +1,40 @@
+◆배경색, 배경 범위, 배경 이미지 지정하기
+
+▶background-color -> 배경색 지정
+  ●색상 사용하는 방법들 사용
+  
+▶background-clip -> 배경색의 적용 범위 지정
+  ●border-box -> 박스 모델의 가장 외곽인 테두리까지 지정
+  ●padding-box -> 테두리를 뺀 패딩까지 지정
+  ●content -> 패딩까지뺀 콘텐츠 부분만 지정
+  
+▶background-image ->배경 이미지 지정
+  ex) background-image : url('경로')
+  
+▶background-repeat -> 배경 이미지 반복 방법 지정
+  ●repeat -> 화면에 가득 찰 때까지 반복함
+  ●repeat-x -> 화면 너비에 가득 찰 때까지 가로로만 반복
+  ●repeat-y -> 화면 높이에 가득 찰 때까지 세로로만 반복
+  ●no-repeat -> 반복 X 한 개만 표시
+  
+▶background-position -> 배경 이미지의 위치 지정
+  ex)background-position : <수평 위치> <수직 위치>
+  
+▶background-origin -> 배경 이미지의 적용 범위 조절
+  ●content-box -> 내용부분에만 배경 이미지 표시(기본값)
+  ●padding-box -> 패딩부분까지만 이미지 표시
+  ●border-box -> 테두리까지만 이미지 표시
+  
+▶background-attachment -> 배경 이미지 고정
+  ●scroll -> 화면 스크롤시 배경 이미지도 스크롤됨(기본값)
+  ●fixed -> 화면 스크롤해도 배경은 그대로
+  
+★background -> 앞에서 사용한 속성들을 이걸로 한 번에 쓸 수 있음.
+
+▶background-size -> 배경 이미지 크기 조절
+  ●auto -> 기본값
+  ●contain -> 요소 안에 배경 이미지가 다 들어오게 이미지를 확대,축소
+  ●cover -> 배경 이미지로 요소를 모두 덮도록 이미지를 확대,축소
+  ●크기 -> 직접 지정
+  ●백분율 -> 직접 지정
+  
