@@ -113,4 +113,39 @@ ex)
 
 ->객실 소개 클릭시 sssss가 노란색으로 바뀜
 
-▶
+▶:enabled -> 사용가능한 상태일 때 스타일 지정
+▶:disabled -> 사용불가능한 상태일 때 스타일 지정
+
+▶:checked -> 폼의 라디오 박스, 체크 박스에서 선택된 항목에 스타일 지정
+ex)
+input:checked {
+	color:yellow;
+}
+<input type="radio" name="room" id="basic>
+<label for="basic">체크</label>
+
+-> 체크를 클릭시 체크가 노란색으로 바뀜
+
+▶:not -> 특정 요소 제외하고 스타일 적용
+input[type=text], input[type=tel] {} 과 input:not([type=radio]) {} 는 같음
+
+
+◆구조 가상 클래스 
+
+웹 문서 구조 기준으로 특정 위치에 있는 요소 찾아 스타일 적용할 때 사용
+
+▶:only-child -> 부모 안에 자식 요소가 하나뿐일 때 자식 요소 선택
+▶A:only-type-of -> 부모 안에 A요소가 하나뿐일 때 선택
+▶:first-child -> 부모 안 모든 요소중 첫 번째 자식 요소 선택
+▶:last-child -> 부모 안 모든 요소중 마지막 자식 요소 선택
+▶A:first-of-type -> 부모 안 A 요소중 첫 번째 자식 요소 선택
+▶A:last-of-type -> 부모 안 A 요소중 마지막 자식 요소 선택
+▶:nth-child(n) -> 부모 안 모든 요소중 n번째 자식 선택
+▶:nth-last-child(n) -> 부모 안 모든 요소중 뒤에서 n 번째 자식 선택
+▶A:nth-of-type(n) -> 부모 안 A 요소중 n번째 자식 요소 선택
+▶A:nth-last-of-type(n) -> 부모 안 A 요소중 뒤에서 n번째 자식 요소 선택
+
+★수식을 사용해 지정가능
+ex)
+p:nth-child(odd) (2n+1) -> 홀수 번째 모두 선택
+p:nth-child(even) (2n) -> 짝수 번째 모두 선택
