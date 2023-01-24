@@ -1,0 +1,40 @@
+
+
+◆transform -> 요소를 이동, 회전, 왜곡하는 속성
+ ▶2차원 변형 함수
+  ●translate(a,b) -> x축으로 a, y축으로 b이동
+  ●translateX(a) -> x축으로 a이동
+  ●translateY(b) -> y축으로 a이동
+  ●scale(a,b) -> x축으로 a, y축으로 b만큼 확대,축소
+  ●scaleX(a) -> x축으로 a만큼 확대,축소
+  ●scaleY(b) -> y축으로 b만큼 확대,축소
+  ●rotate(각도a)-> a만큼 회전(deg)
+  ●skew(a,b) -> x축으로 a, y축으로 b만큼 왜곡
+  ●skewX(a) -> x축으로 a만큼 왜곡 (각도값이 양수면 왼쪽이 올라감)
+  ●skewY(b) -> y축으로 b만큼 왜곡 (각도값이 양수면 오른쪽이 올라감)
+ ▶3차원 변형 함수 (z축은 앞뒤로 이동, 값이 커지면 사람이 보는쪽으로 이동
+  ●translate3d(a,b,c) -> x축으로 a, y축으로 b, z축으로 c이동
+  ●translateZ(c) -> z축으로 c이동
+  ●scale3d(a,b,c) -> x축으로 a, y축으로 b, z축으로 c만큼 확대,축소
+  ●scaleZ(a) -> z축으로 c만큼 확대,축소
+  ●rotate(a,b,각도c)-> c만큼 회전
+  ●rotate3d(a,b,c,각도d)-> d만큼 회전
+  ●rotateX(각도c) -> c만큼 회전
+  ●rotateY(각도c) -> c만큼 회전
+  ●rotateZ(각도c) -> c만큼 회전
+  ●perspective(길이) -> 입체적으로 보이게 깊이값 지정(0보다 커야하며 원래 있던 위치에서 사용자 있는 쪽으로 얼마나 이동하는지 픽셀로 나타냄 클수록 멀어짐)
+  
+ex) .movex:hover {
+  transform : translateX(50px);
+}
+<div class="movex">
+  aa
+</div>
+-> 마우스 닿으면 x축으로 50px이동
+
+
+◆트랜지션
+
+
+★transition -> 몇초동안 변화할지
+ex) transition : all 3s; ->모든게 3초동안
