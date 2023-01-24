@@ -149,3 +149,29 @@ input[type=text], input[type=tel] {} 과 input:not([type=radio]) {} 는 같음
 ex)
 p:nth-child(odd) (2n+1) -> 홀수 번째 모두 선택
 p:nth-child(even) (2n) -> 짝수 번째 모두 선택
+
+
+◆가상 요소
+
+문서안 특정 부분에 스타일 지정하기 위해 가상으로 요소를 추가
+
+▶::first-line ->첫 번째 줄에 스타일 적용
+ex)
+p::first-line {
+	color:blue;
+}
+-> <p>태그 사용시 첫 번째 줄이 파란 글자가 됨
+
+▶::first-letter -> 첫 번째 글자에 스타일 적용
+★ 첫 번째 글자가 무조건 첫 번째 줄에 있어야함, 만약 <p> 태그안에 <br>태그 사용시 적용 불가
+
+▶::before -> 지정한 요소 뒤에 스타일 넣을 수 있다. (텍스트나 이미지 추가 가능)
+▶::after -> 지정한 요소 앞에 스타일 넣을 수 있다.
+ex)
+li.new::after{
+	content:NEW!;
+	background-color:red;
+	color:white;
+}
+<li class="new">제품</li>
+-> 글자 '제품'뒤에 빨간 배경에 하얀 글씨로 NEW!가 나타남
