@@ -91,4 +91,26 @@ ex) a:link{
 ▶:focus -> 초점이 맞추어 졌을 때(클릭하고나서, tab키를 이용해 입력 커서를 이동했을 때)
 ★ 위 순서대로 지정해야 오류가 없다.
 
+
 ▶:traget -> 앵커 대상에 스타일을 적용(같은 문서 안에서 다른 위치로 이동시 목적지가 되는 부분의 스타일을 지정)
+ex)
+	  #room:target{
+		  color:yellow;
+	  }
+  </style>
+</head>
+
+<body>
+        <li><a href="#room">객실 소개</a></li> 
+        
+	<div id="room">
+		<h1>
+			sssss
+		</h1>
+	</div>
+ 
+</body>
+
+->객실 소개 클릭시 sssss가 노란색으로 바뀜
+
+▶
