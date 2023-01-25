@@ -23,3 +23,70 @@ ex) <meta name="viewport" content="속성1=값1, 속성2=값2">
   ●vh -> 1vh는 뷰포트 높이의 1%
   ●vmin -> 1vmin은 뷰포트 너비와 높이중 작은 값의 1%
   ●vmax -> 1vmax은 뷰포트 너비와 높이중 큰 값의 1%
+
+
+
+◆미디어 쿼리 ->접속하는 기기의 화면 크기에 따라 다른 CSS스타일을 적용할 수 있게함
+
+●미디어 쿼리 구문 기본형
+  @media [only,not] 미디어 유형 [and 조건]...  -> <style>태그 안에 넣음
+  
+ex)
+@media screen and (min-width:768px) and (max-width:1439px) {
+}
+-> 미디어 유형이 screen 이고 너비가 768~1439px면 적용한다.
+
+●only -> 미디어 쿼리를 지원하지 않는 웹 브라우저에서는 미디어 쿼리를 실행하지 않는다.
+●not -> not다음에 지정하는 미디어 유형을 제외한다.
+●and -> 조건을 여러개 추가할 수 있게 한다.
+
+
+▶미디어 유형의 종류
+  ●all -> 모든 미디어 유형에서 CSS적용
+  ●print -> 인쇄 장치에서 사용할 CSS적용
+  ●screen -> 컴퓨터 스크린, 스마트폰 스크린
+  ●tv -> 음성과 영상이 동시에 출력되는 TV
+  ●aural -> 화면을 읽어 소리로 출력해 주는 장치(음성 합성 장치)
+  ●braille -> 점자 표시 장치
+  ●handheld -> 패드
+  ●projection -> 프로젝터
+  ●tty -> 디스플레이 기능이 제한된 장치(px단위의 사용이 불가)
+  ●embossed -> 점자 프린터
+
+
+▶웹 문서의 너비와 높이 속성
+  ●width, height -> 가로 너비, 세로 높이를 지정
+  ●min-width, min-height -> 최소 너비, 최소 높이를 지정
+  ●max-width, max-height -> 최대 너비, 최대 높이를 지정
+  
+▶단말기의 너비와 높이 속성
+  ●device-width, device-height -> 가로 너비, 세로 높이를 지정
+  ●min-device-width, min-device-height -> 최소 너비, 최소 높이를 지정
+  ●max-device-width, max-device-height -> 최대 너비, 최대 높이를 지정
+  
+▶화면 회전 속성 -> 조건에 넣음
+  ●orientation:portrait -> 세로 모드일때 지정
+  ●orientation:landscape -> 가로 모드일때 지정
+  
+★다양한 화면이 존재해 모두 다 만들 수는 없으므로 크게 스마트폰, 태블릿, 데스크톱 3가지로 나누어 지정해준다.
+스마트폰 -> 최소 너비가 portrait는 320px, landscape는 480px
+태블릿 -> 세로768px이상, 가로1024px이상
+데스크톱 -> 화면 크기 1024px이상
+
+
+
+◆미디어 쿼리 적용
+
+
+▶외부 CSS파일 연결
+  ●<link rel="stylesheet" media="미디어 쿼리 조건" href="css 파일 경로"> -> <head>태그 안에 넣음, CSS파일이 많고 규모가 크면 이게 더 좋음
+  ●@import url('css 파일 경로') 미디어 쿼리 조건 -> <style>태그 안에 넣음
+  
+▶웹 문서에 직접 정의
+  ●<style media="조건"> {} </style>
+  ●<style> @media 조건 {} </style>
+
+
+
+
+
