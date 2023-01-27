@@ -88,5 +88,141 @@ ex)
 
 
 
-◆그리드 레이아웃 ->
 
+
+◈그리드 레이아웃 -> 웹 사이트를 여러 개의 칼럼으로 나눈후 여러 요소를 화면에 맞게 배치하는 것을 말한다.
+
+
+
+
+◆플렉서블 박스 레이아웃 -> 수평, 수직중 한곳을 축으로 박스를 배치(IE11에서 부분적으로만 지원)
+
+▶용어들
+  ●플렉스 컨테이너(부모 박스) -> 플렉스 박스 레이아웃을 적용할 대상을 묶는 요소
+  ●플렉스 항복(자식 박스) -> 플렉스 박스 레이아웃을 적용할 대상
+  ●주축 -> 플렉스 항목 배치하는 방향, 왼쪽에서 오른쪽이며 수평으로 배치
+  ●교차축 -> 배치하는 방향, 주축과 수직이며 위에서 아래로 배치
+  
+▶display -> 플렉스 컨테이너를 지정
+  ●flex -> 플렉스 항목들을 블록 레벨 요소로 배치
+  ●inline-flex -> 컨테이너 안의 플렉스 항목을 인라인 레벨 요소로 배치
+  
+▶flex-direction -> 플렉스 방향을 지정
+  ●row -> 주축을 가로로 지정, 왼쪽->오른쪽으로 배치
+  ●row-reverse -> 주축을 가로로 지정, 오른쪽->왼쪽으로 배치
+  ●column -> 주측을 세로로 지정, 위쪽->아래쪽으로 배치
+  ●column-reverse -> 주축을 세로로 지정, 아래쪽->위쪽으로 배치
+  
+▶flex-wrap -> 플렉스 항목의 줄을 바꾸는 속성
+  ●nowrap -> 플렉스 항목을 한 줄에 표시(기본값)
+  ●wrap -> 여러 줄에 표시
+  ●wrap-reverse ->여러 줄에 표시, 시작점과 끝점이 바뀜
+
+▶flex-flow -> flex-direction과 flex-wrap속성을 한꺼번에 지정, 스페이스바로 구분
+
+◆플렉스 항목 배치하는 속성
+  ▶justify-content -> 주축에서 플렉스 항목 간의 정렬 방법 지정
+    ●flex-start -> 주축의 시작점에 맞춰 배치
+    ●flex-end -> 주축의 끝점에 맞춰 배치
+    ●center -> 주축의 중앙에 맞춰 배치
+    ●space-between -> 첫 번째 항목을 주축의 시작점, 마지막 항목을 끝점에 배치하고 나머지 항목은 그 사이에 같은 간격으로 배치
+    ●space-around -> 모든 항목을 같은 간격으로 배치
+    
+  ▶align-items -> 교차축 방향의 정렬 방법
+    ●flex-start -> 교차축의 시작점에 맞춰 배치
+    ●flex-end -> 교차축의 끝점에 맞춰 배치
+    ●center -> 교차축의 중앙에 맞춰 배치
+    ●baseline -> 교차축의 문자 기준선에 맞춰 배치
+    ●stretch -> 플렉스 항목을 늘려 교차축에 가득 차게 배치
+    
+  ▶align-self -> 교차축에 있는 개별 항목의 정렬 방법(특정 항목만)
+    ●align-items와 속성은 같다.
+  ex)
+  #box1{ align-self:flex-start;}
+  
+  <div class="container">
+    <div class="box" id="box1">1</div>
+    <div class="box">2</div>
+  </div>
+  
+  ▶align-content -> 주축에서 줄 바꿈이 생겨 플렉스 항목이 여러줄 일때 간격 지정
+    ●flex-start -> 교차축의 시작점에 맞춰 배치
+    ●flex-end -> 교차축의 끝점에 맞춰 배치
+    ●center -> 교차축의 중앙에 맞춰 배치
+    ●space-between -> 첫 번째 항목, 끝 항목을 각각 시작점, 끝점에 맞추고 나머지 항목은 그 사이에 같은 간격으로 배치
+    ●space-around -> 모든 항목을 같은 간격으로 배치
+    ●stretch -> 플렉스 항목을 늘려 교차축에 가득 차게 배치
+  
+
+
+
+
+◆CSS 그리드 레이아웃 -> 축없이 어느 방향으로든 배치(대부분의 브라우저에서 사용 가능)
+
+
+
+
+▶용어들
+  ●칼럼 -> 열
+  ●줄 -> 행
+  
+▶display -> 그리드 컨테이너를 지정
+  ●grid -> 항목들을 블록 레벨 요소로 배치
+  ●inline-grid -> 항목들을 인라인 레벨 요소로 배치
+
+▶grid-template-columns, grid-template-rows -> 칼럼과 줄의 크기와 개수를 지정
+ex)
+#wrapper {
+  display:grid;
+  grid-template-columns : 200px 200px 200px; //너비가 200px인 칼럼 3개
+  grid-template-rows : 100px 100px; //줄의 높이는 100px로 2줄
+}
+<div id="wrapper">
+  <div class="item"> 1</div>
+  <div class="item"> 2</div>
+</div>
+
+▶fr -> 상대적인 크기, px는 항상 크기가 고정되서 반응형 웹 디자인에는 적합하지 않음
+ex) grid-template-columns : 1fr 2fr 1fr; //1:2:1 비율로 배치
+  ●repeat() -> 값이 반복될 때 줄여서 쓸 수 있다.
+    ex) repeat(3,1fr); //3번, 1fr로
+
+▶minmax() -> 최솟값, 최댓값을 지정
+ex)
+grid-template-rows : minmax(100px,auto) //줄 높이는 최소 100px
+
+▶auto-fill,auto-fit -> repeat함수에서 웹 페이지 너비에 따라 자동으로 칼럼의 개수를 조절해줌
+  ●fill -> 꽉 채워서
+  ●fit -> 지정한 만큼만
+ex)
+repeat(auto-fit,minmax(200px,1fr) -> 자리가 남으면 꽉 채우서 배치
+repeat(auto-fill,minmax(200px,1fr) -> 최소 200px로 6개
+
+▶grid-column-gap, grid-row-gap, grid-gap -> 칼럼과 칼럼 간격 지정, 줄과 줄 간격 지정, 칼럼과 줄 사이 간격 한꺼번에 지정
+★이거 외에도 justify-content, align-center 같은 속성을 통해 지정 가능
+
+
+◆템플릿 영역을 통해 그리드 배치하기 -> 쉽다!e
+
+ex)
+.box1{ grid-area:box1; }
+.box2{ grid-area:box2; }
+.box3{ grid-area:box3; }
+.box4{ grid-area:box4; }
+
+#wrapper {
+  grid-template-areas:
+  "box1 box1 box1"
+  "box2 box3 box3"
+  "box2 . box3"
+  
+.box{ border: 1px solid black; }
+
+<div id="wrapper">
+  <div class="box box1"> </div>
+  <div class="box box2"> </div>
+  <div class="box box3"> </div>
+  <div class="box box4"> </div>
+</div>
+-> 이러면 areas 모양대로 만들어짐 '.'은 빈칸
+}
