@@ -1,0 +1,51 @@
+◆이벤트 -> 사용자나 웹 브라우저가 행하는 동작
+
+▶마우스 이벤트
+  ●click -> 사용자가 HTML요소 클릭시
+  ●dbclick -> 더블클릭시
+  ●mousedown -> 요소 위에서 마우스 눌렀을 때
+  ●mousemove -> 요소 위에서 마우스 움직일 때
+  ●mouseover -> 포인터가 요소 위로 옮겨질 때
+  ●mouseout -> 포인터가 요소 위를 벗어날 때
+  ●mouseup -> 요소 위에 놓인 마우스에서 손을 뗄 때
+
+▶키보드 이벤트
+  ●keydowon -> 키를 누르는 동안
+  ●keypress -> 키를 눌렀을 때
+  ●keyup -> 키에서 손을 뗄 때
+  
+▶문서 로딩 이벤트
+  ●abort -> 문서가 완전히 로딩되기 전 불러오기 멈췄을 때 이벤트 발생
+  ●error -> 문서가 정확히 로딩되지 않았을 때
+  ●load -> 문서 로딩이 끝났을 때
+  ●resize -> 문서 화면 크기가 바뀌었을 때
+  ●scroll -> 문서 화면이 스크롤 되었을 때
+  ●unload -> 문서에서 벗어날 때
+  
+▶폼 이벤트
+  ●blur -> 폼 요소에 포커스를 잃었을 때
+  ●change -> 목록이나 체크 상대 등이 변경되었을 때
+  ●focus -> 폼 요소에 포커스가 놓였을 때 (<button>,<textarea>,<select>,<abel>)등에서 사용
+  ●reset -> 폼이 리셋되었을 때
+  ●submit -> 'submit' 버튼 클릭 시
+
+
+
+◆이벤트 처리기 -> 이벤트 발생시 처리하는 함수(HTML이 주가 됨)
+기본형 -> <태그 on이벤트명 = "함수명">
+ex) <a href="#" onclick="alert('초록색 클릭')">Green</a>
+●여러가지 명령을 실행해야 한다면 명령을 묶어 함수로 만들어 쓰기
+ex) <a href="#" onclick="change_color('green')">Green</a>   change_color는 함수
+
+
+
+◆DOM을 이용한 이벤트 처리기(자바스크립트가 주가 됨)
+기본형 -> 웹요소.on이벤트명 = 함수;
+●웹요소는 document.querySelector()사용
+ex)
+var changeBtn = document.querySelector("#change");  -> 함수를 여러번 사용할 때
+changeBtn.onclick = changecolor;
+
+document.querySelector("#change").onclick = changecolor;  -> 웹 요소를 여러번 사용하지 않는다면
+
+document.querySelector("#change").onclick = function() { }  ->함수를 한 번만 사용한다면
