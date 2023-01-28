@@ -104,6 +104,7 @@
 
 ▶border -> 표에 테두리를 그려 줌
   ex) border: 1px solid black(선의 굵기는 1px, 실선이고 색은 검정색) (dotted은 점선)
+  ●이거도 top,bottom,left,right사용해서 그 부분만 바꿔줄 수 있다.
 
 ▶border-spacing -> 셀 사이의 여백 지정
   ex) border-spacing : 수평거리 수직거리
