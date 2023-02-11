@@ -26,4 +26,5 @@ int main()
 
 /*
   5kg을 많이 써야 최소 개수가 나오므로 5kg으로만 못 만들때 3kg짜리를 하나씩 추가해가며 구한다.
+  https://www.acmicpc.net/problem/2839
 */
