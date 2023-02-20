@@ -1,0 +1,27 @@
+우선순위 큐
+
+queue와 비슷하지만 queue는 먼저 넣은게 먼저 나오지만 우선순위 큐는 우선순위 높은게 먼저 나옴.
+ 
+#include<queue>를 추가해서 사용
+
+
+●empty() : 비어있으면 1, 아니면 0 반환
+●size() : 크기 반환
+●top() : 우선순위 가장 높은 값 반환
+●push() : 우선순위 큐에 값 삽입
+●emplace() : 우선순위 큐에 구조 삽입(pair의 경우 make_pair()로 pair만들고 넣지만 emplace쓰면 바로 넣음)
+●pop() : 우선순위 가장 높은 값 삭제(top)
+
+ex)
+priority_queue<int> v; -> 선언
+나머지는 비슷
+
+★우선순위 조건 변경
+struct cmp
+{
+    bool operator()(int a, int b)
+    {
+        return a<b;
+    }
+};
+-> bool operator는 변경불가하고 그대로 써야 함
