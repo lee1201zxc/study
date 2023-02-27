@@ -20,6 +20,3 @@
 
 <A href ="https://ide.goorm.io/"><img src="https://user-images.githubusercontent.com/95333770/209818579-c9c71af5-03ee-47a6-ab81-0ffa9921fc2c.png" width="20%" height="20%"/>
 
-                                                                                                                                         
-Seeb - Breathe
-FAST BOY x Topic - Forget You
