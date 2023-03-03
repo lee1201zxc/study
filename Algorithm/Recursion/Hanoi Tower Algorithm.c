@@ -3,12 +3,12 @@ void hanoi(int n,char from,char rest,char to)
 {
 	if(n==1)
 	{
-		printf("%d¸¦ %c¿¡¼­ %c·Î ÀÌµ¿\n",n,from,to);
+		printf("%dë¥¼ %cì—ì„œ %cë¡œ ì´ë™\n",n,from,to);
 	}
 	else
 	{
 		hanoi(n-1,from,to,rest);
-		printf("%d¸¦ %c¿¡¼­ %c·Î ÀÌµ¿\n",n,from,to);
+		printf("%dë¥¼ %cì—ì„œ %cë¡œ ì´ë™\n",n,from,to);
 		hanoi(n-1,rest,from,to);	
 	}
 }
