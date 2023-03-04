@@ -23,3 +23,5 @@
 + 노션
   
 <A href ="https://www.notion.so/ko-kr"><img src="https://user-images.githubusercontent.com/95333770/222903508-d027c5dc-cccd-42cd-b058-d50b008a0e20.png" width="17%" height="17%"/>
+
++ CHATGPT
