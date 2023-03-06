@@ -10,7 +10,9 @@
 + HTML,CSS,JS
 <img src="https://user-images.githubusercontent.com/95333770/209753337-a742fb49-7e00-45cf-9779-f82436c3122a.png"  width="20%" height="20%"/>
 
-                                                                                                                                       
++ 컴퓨터구조
+
++ 자격증
 
 ---
 
