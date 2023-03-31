@@ -28,5 +28,4 @@
 
 + CHATGPT
 
-<A href ="https://user-images.githubusercontent.com/95333770/229106639-6192ac08-9b86-4a08-a9b0-c2cadbac9d67.svg
-" width="17%" height="17%"/>
+  <A href ="https://chat.openai.com/chat"><img src="[https://user-images.githubusercontent.com/95333770/222903508-d027c5dc-cccd-42cd-b058-d50b008a0e20.png](https://user-images.githubusercontent.com/95333770/229106639-6192ac08-9b86-4a08-a9b0-c2cadbac9d67.svg)" width="17%" height="17%"/>
