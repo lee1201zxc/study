@@ -1,0 +1,51 @@
+1. var가 아닌 let, const같은 변수형 사용가능
+2. template string 사용가능 
+const animal = 'Cat';
+const legs = 4;
+const sound = 'meow';
+
+const explain = 
+`${animal} has ${legs} legs.
+${animal} says "${sound}".`
+console.log(explain);
+// 변수값을 출력할 때 ${}로 감싸며, '가 아닌 `다 (백틱)
+
+3. arrow 함수 사용 가능
+const add = (a,b) => {
+    return `${a}+${b}=${a+b}`
+}
+
+4. class
+class Animal {
+    constructor(name, sound) {
+        this.name=name;
+        this.sound=sound;
+    }
+    
+    explain() {
+        console.log(`${this.name} says ${this.sound}`)
+    }
+}
+
+const duck = new Animal("duck", "quack");
+
+5. destructing 
+const duck = {
+    name: "duck",
+    sound: "quack",
+};
+
+const { name: duckName, sound: duckSound } = duck;
+
+console.log("name", duckName);
+console.log("sound", duckSound);
+
+const animals = ["duck", "cat", "bear"];
+
+
+const [first, second, third] = animals;
+
+console.log("first", first);
+console.log("second", second);
+console.log("third", third);
+
