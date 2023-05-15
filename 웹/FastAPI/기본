@@ -1,7 +1,6 @@
 
 설치
-  pip install fastapi
-  pip install uvicorn
+  pip install fastapi 'uvicorn[standard]'
 
 Uvicorn은 ASGI웹 서버로 빠른 속도와 비동기 처리가 특징이다.
 fastapi를 사용할 때 필요하다.
