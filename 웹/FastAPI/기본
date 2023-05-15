@@ -1,0 +1,19 @@
+
+설치
+  pip install fastapi
+  pip install uvicorn
+
+Uvicorn은 ASGI웹 서버로 빠른 속도와 비동기 처리가 특징이다.
+fastapi를 사용할 때 필요하다.
+
+
+●기본 코드 
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def root():
+    return {'Hello':'World!'}
+    
+●구름에서 실행시 -> uvicorn main:app --reload --host=0.0.0.0 --port=8000
