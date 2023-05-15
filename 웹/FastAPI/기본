@@ -16,3 +16,38 @@ def root():
     return {'Hello':'World!'}
     
 ●구름에서 실행시 -> uvicorn main:app --reload --host=0.0.0.0 --port=8000
+
+
+POST: 데이터를 생성하기 위해.
+GET: 데이터를 읽기 위해.
+PUT: 데이터를 업데이트하기 위해.
+DELETE: 데이터를 삭제하기 위해.
+
+■GET
+
+●경로 매개변수
+@app.get("/items/{item_id}")
+async def read_item(item_id):
+    return {"item_id":item_id}
+->  http://127.0.0.1:8000/items/foo 로 이동시 화면에 {"item_id":"foo"} 라고 뜸
+-> 루트에서 /items/{item_id} 로 이동시 return 부분을 실행함
+
+●타입이 있는 매개변수
+경로 매개변수 타입을 선언할 수도 있음
+async def read_item(item_id: int): -> itme_id는 int형,매개변수에 int형이 아닌 다른형을 전달하면 오류가 뜸
+
+●문서화
+링크뒤에 /docs를 열면 대화식 api문서가 나타남
+redoc은  대체 api문서 제공
+
+●순서 문제
+
+@app.get("/users/me")
+async def read_user_me():
+    return {"user_id": "the current user"}  ->users/me처럼 현재 사용자의 데이터를 가져올 때 먼저 이렇게 선언 해야함, 안그러면 me를 {user_id}로 인식해서 아래가 실행됨.
+
+@app.get("/users/{user_id}")
+async def read_user(user_id: str):
+    return {"user_id": user_id}
+
+
