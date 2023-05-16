@@ -23,7 +23,7 @@ GET: 데이터를 읽기 위해.
 PUT: 데이터를 업데이트하기 위해.
 DELETE: 데이터를 삭제하기 위해.
 
-■GET
+■경로 
 
 ●경로 매개변수
 @app.get("/items/{item_id}")
@@ -50,4 +50,138 @@ async def read_user_me():
 async def read_user(user_id: str):
     return {"user_id": user_id}
 
+●열거형으로 작업
+from enum import Enum
 
+from fastapi import FastAPI
+
+
+class ModelName(str, Enum):
+    alexnet = "alexnet"
+    resnet = "resnet"
+    lenet = "lenet"
+
+app = FastAPI()
+
+@app.get("/models/{model_name}")
+async def get_model(model_name: ModelName):
+    if model_name is ModelName.alexnet:
+        return {"model_name": model_name, "message": "Deep Learning FTW!"}
+
+    if model_name.value == "lenet":
+        return {"model_name": model_name, "message": "LeCNN all the images"}
+
+    return {"model_name": model_name, "message": "Have some residuals"}
+
+-> model_name값으로 class에서 선언한 것들만 들어갈 수 있음
+
+●경로를 포함하는 매개변수
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/files/{file_path:path}")
+async def read_file(file_path: str):
+    return {"file_path": file_path}
+
+->  /files/home/me 이렇게 링크 주면 리턴값에 "file_path": home/me 이렇게 나옴, :path는 매개변수가 경로와 일치해야함을 알려줌(경로 두번 이상 지날 때 필요)
+                                                                                ex) /files/home이 아닌 /files/home/me같은 경우
+
+
+■쿼리 매개변수
+
+경로 매개변수의 일부가 아닌 다른 함수 매개변수를 선언할 때, 쿼리 매개변수로 해석해 실행함.
+쿼리란 URL에서 ? 후에 나오고 &으로 구분되는 키와 값의 집합 ex) a.com?id=1&pw=2 이렇게 직접 값을 넣어줄 수도 있음. ex) /items?skip=1&limit=3
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"}] -> 배열 선언
+
+
+@app.get("/items/")
+async def read_item(skip: int = 0, limit: int = 3):
+    return fake_items_db[skip : skip + limit] -> 배열 슬라이싱, skpi~ skpi+limit까지 출력한다는 의미(반복문 비슷)
+-> fake_items_db배열에서 0~2번 인덱스까지 리턴
+
+
+●선택적 매개변수
+
+
+from typing import Union
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/items/{item_id}")
+async def read_item(item_id: str, q: Union[str, None] = None):
+    if q:
+        return {"item_id": item_id, "q": q}
+    return {"item_id": item_id}
+-> q는 선택적 매개변수임. q는 선택적이며 기본값으로 None이 됨.
+-> q는 주소창에서 직접값을 넣어줘서 사용하는 것으로 보임 아직은
+
+
+●쿼리 매개변수 형변환
+
+
+from typing import Union
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/items/{item_id}")
+async def read_item(item_id: str, q: Union[str, None] = None, short: bool = False):
+    item = {"item_id": item_id}
+    if q:
+        item.update({"q": q})
+    if not short:
+        item.update(
+            {"description": "This is an amazing item that has a long description"}
+        )
+    return item
+    
+-> short를 bool형을 선언함
+
+
+●여러 경로/쿼리 매개변수
+FastAPI는 경로,쿼리 매개변수를 알아서 구분할 수 있음
+from typing import Union
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/users/{user_id}/items/{item_id}")
+async def read_user_item(
+    user_id: int, item_id: str, q: Union[str, None] = None, short: bool = False
+):
+    item = {"item_id": item_id, "owner_id": user_id}
+    if q:
+        item.update({"q": q})
+    if not short:
+        item.update(
+            {"description": "This is an amazing item that has a long description"}
+        )
+    return item
+-> 경로에서 {}안에 있는 부분들이 모두 전달됨
+
+
+●필수 쿼리 매개변수
+쿼리 매개변수는 위에서 선택적이라고 했으나 필수적으로 바꿀 수 있음 but 기본값 선언 불가해짐
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/items/{item_id}")
+async def read_user_item(item_id: str, needy: str):
+    item = {"item_id": item_id, "needy": needy}
+    return item
+->needy는 str형 필수 쿼리 매개 변수임 값 지정 안해주면 오류뜸
