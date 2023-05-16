@@ -18,8 +18,8 @@ def root():
 ●구름에서 실행시 -> uvicorn main:app --reload --host=0.0.0.0 --port=8000
 
 
-POST: 데이터를 생성하기 위해.
-GET: 데이터를 읽기 위해.
+POST: 데이터를 생성하기 위해. (서버에 데이터 저장시)
+GET: 데이터를 읽기 위해. (서버로부터 리소스 가져옴)
 PUT: 데이터를 업데이트하기 위해.
 DELETE: 데이터를 삭제하기 위해.
 
@@ -185,3 +185,52 @@ async def read_user_item(item_id: str, needy: str):
     item = {"item_id": item_id, "needy": needy}
     return item
 ->needy는 str형 필수 쿼리 매개 변수임 값 지정 안해주면 오류뜸
+
+
+◆
+■요청 본문(Request Body) (POST)
+브라우저(클라이언트)에서 API로 데이터를 보낼 때에는 요청 본문으로 보낸다.
+우선 from pydantic import BaseModel로 BaseModel을 가져온다. pydantic->데이터 유효성 검증, 데이터 형변환(파싱)의 역할을 함.
+
+from typing import Union
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+
+class Item(BaseModel):
+    name: str
+    description: Union[str, None] = None
+    price: float
+    tax: Union[float, None] = None
+
+
+app = FastAPI()
+
+
+@app.post("/items/")
+async def create_item(item: Item):
+    return item
+
+-> class Item에 맞는 값을 적어서 보내주면 서버에 저장됨, docs에서 데이터를 추가하고 저장 되었는지 확인 가능함.
+-> 요청 본문을 json으로 읽고, 해당 유형을 변환하고 데이터를 검정하고 데이터를 제공한다.
+
+●요청 본문 + 경로 매개변수 , 경로도 가능
+
+from typing import Union
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+class Item(BaseModel):
+    name: str
+    description: Union[str, None] = None
+    price: float
+    tax: Union[float, None] = None
+
+app = FastAPI()
+
+@app.put("/items/{item_id}")
+async def create_item(item_id: int, item: Item):
+    return {"item_id": item_id, **item.dict()} -> ** : 딕셔너리에 들어있는 값을 함수에 전달하되, 각 값에 대응하는 키를 키워드로 사용하도록 한다.
+-> 두개를 동시에 사용 가능함, put = 데이터 업데이트시 사용
