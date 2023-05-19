@@ -1,0 +1,21 @@
+■파일 생성 → open()
+기본형 → def open(file, mode='', buffering=None, encoding=None, errors=None, newline=None, closefd=True):
+●file → 파일 경로 지정
+●mode → 파일이 열리는 옵션
+  r : 읽기 모드, w : 쓰기 모드(파일 존재시 삭제후 생성), a : 쓰기 모드(파일 존재시 커서가 맨 뒤에 감), x : 파일 없으면 생성하고 쓰기모드
+  b : 바이너리 모드, t : 텍스트 모드
+ex) f= open('C:/test/t1.txt', 'w')
+    f.write('add') // 파일에 텍스트 쓰기
+    
+★ open한 파일은 반드시 close해줘야함!
+
+■파일 쓰기 → write, writelines
+f.write('') → 문자열 넣기
+f.writeline('\n'.join(['a','b','c'])) → 문자열 리스트 넣기
+
+■파일 읽기 → read, readline, readlines, seek, tell
+f.read(n) → 파일 스트림으로부터 해당 위치의 문자 n개를 읽어오기
+f.readline() → 파일 스트림으로부터 한 라인의 문자열 읽어옴('\n'전까지)
+f.readlines() → 해딩 위치에서부터 모든 문자열을 읽어옴(List[문자열]을 반환한다.)
+f.seek(위치) → 해당 위치로 파일의 커서를 옮김
+f.tell() → 현재 커서위치를 반환
