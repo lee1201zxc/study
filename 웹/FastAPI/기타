@@ -23,3 +23,8 @@ api_key = os.getenv("API_KEY")
 
 ◆.gitignore -> Git 저장소에서 추적하지 않을 파일 또는 디렉토리를 지정하는데 사용되는 파일입니다. 
 개인정보, 임시파일,개발환경관련파일
+
+◆ Dockerfile -> Docker 이미지를 빌드할 때 사용됩니다. Dockerfile은 Docker 이미지를 구성하는데 필요한 명령어와 설정을 포함합니다.
+
+◆ config ->  프로젝트에서 사용되는 설정 정보를 관리하는 파일입니다. 
+
