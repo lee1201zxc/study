@@ -20,3 +20,6 @@ load_dotenv()
 # 환경 변수 사용
 db_url = os.getenv("DB_URL")
 api_key = os.getenv("API_KEY")
+
+◆.gitignore -> Git 저장소에서 추적하지 않을 파일 또는 디렉토리를 지정하는데 사용되는 파일입니다. 
+개인정보, 임시파일,개발환경관련파일
