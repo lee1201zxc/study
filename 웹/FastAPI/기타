@@ -1,0 +1,22 @@
+◆ .env파일 -> 환경 변수를 설정하기 위해 사용
+
+각 줄에 하나의 환경 변수와 해당 값을 입력합니다.
+일반적으로 KEY=VALUE 형식으로 작성하며, = 앞은 환경 변수의 이름이고 = 뒤는 해당 환경 변수의 값입니다.
+
+ex)
+DB_URL=mysql://user:password@localhost:3306/mydatabase
+API_KEY=your-api-key
+
+.env 파일을 사용하면 프로젝트 설정을 관리하기 편리하고, 다양한 환경에서의 실행 환경에 따라 다른 값을 사용할 수 있습니다. 
+```
+pip install python-dotenv # 설치하여 .env파일을 읽고 환경 변수로 설정하는 기능을 제공하는 라이브러리
+```
+ex)
+from dotenv import load_dotenv
+
+# .env 파일 로드
+load_dotenv()
+
+# 환경 변수 사용
+db_url = os.getenv("DB_URL")
+api_key = os.getenv("API_KEY")
