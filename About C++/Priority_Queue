@@ -26,3 +26,5 @@ struct cmp
     }
 };
 -> bool operator는 변경불가하고 그대로 써야 함
+
+priority_queue<int,vector<int>, greater<int>> v;
