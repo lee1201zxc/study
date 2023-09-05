@@ -5,5 +5,6 @@
 5. 독서(자기개발, 철학, 정보통신) -> 독후감
 6. 운동
 7. 웹 개발 공부, 실습(fastapi)
-
-배열 복사
+6.학점 취득 
+https://www.kcu.ac/portal/default.asp
+https://www.narasarang.or.kr/pt0000/indexPage.do
