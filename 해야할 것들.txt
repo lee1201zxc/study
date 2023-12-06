@@ -6,5 +6,4 @@
 심화 알고리즘 공부(KMP,트리이,네트워크플로우...)
 CS지식 공부(네트워크,운영체제,데이터베이스,하드웨어...)
 독서
-https://www.kcu.ac/portal/default.asp
-https://www.narasarang.or.kr/pt0000/indexPage.do
+블로그 정리
