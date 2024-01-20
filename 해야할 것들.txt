@@ -8,6 +8,7 @@ CS지식 공부(네트워크,운영체제,데이터베이스,하드웨어...)
 블로그 정리
 유니티
 피그마 https://www.figma.com/ -> 웹 다지인 툴, CSS로 변환해줌
+부트캠프 
 
 https://blackkiwi.net/?gad_source=1&gclid=EAIaIQobChMI4u_4_b-3gwMVS9YWBR3uFgmlEAAYASAAEgL8U_D_BwE ->검색량 확인
 https://pixabay.com/ko/ -> 무료 사진
