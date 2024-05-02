@@ -1,0 +1,35 @@
+#include <iostream>
+#include<queue>
+using namespace std;
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+    priority_queue<int,vector<int>, greater<int>> v;
+    int n;
+    cin>>n;
+    for(int i=0; i<n; i++)
+    {
+        for(int z=0; z<n; z++)
+        {
+            int k;
+            cin>>k;
+            v.push(k);
+            if(v.size()==n+1)
+                v.pop();
+        }
+    }
+    cout<<v.top();
+}
+/*
+1500*1500의 숫자를 모두 저장하는 것은 메모리 초과!!(12mb)
+즉 모두 저장하지 말고 적당히 저장해야함. -> 우선순위큐 이용!
+우선순위 큐(숫자가 작은값이 우선순위 높아야함)(greater)에 숫자를 넣는다.
+만약 큐의 사이즈가 n+1을 넘긴다?? 하나 pop(가장 작은 숫자가 pop됨)
+이러면 마지막에는 n개의 숫자가 남는데 이는 n*n숫자중 가장 큰 n개의 숫자가 남는다.
+이제 마지막으로 top값을 출력해주면 이 값은 n번째로 큰 수가 된다.
+우선순위 큐를 이용하여 메모리 초과를 해결하는 좋은 문제이다.
+우선순위 큐는 이진트리를 이용해 특정 값을 빠르게 찾는데 탁월한 자료구조이다.
+
+*/
