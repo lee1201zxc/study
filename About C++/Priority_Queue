@@ -26,5 +26,6 @@ struct cmp
     }
 };
 -> bool operator는 변경불가하고 그대로 써야 함, 내림 차순
+priority_queue<int,vector<int>,cmp> v 로 선언
 
 priority_queue<int,vector<int>, greater<int>> v; -> 오름차순
