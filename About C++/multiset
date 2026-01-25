@@ -1,0 +1,26 @@
+#include<set> 추가
+
+중복을 허용하는 정렬된 집합임.
+map처럼 key,value 두 값이 저장되는게 아닌 하나의 값만 저장됨
+균형 이진 트리를 이용
+중복 허용.
+자동 정렬
+우선순위 큐와는 다르게 전체 순회도 가능(iterator 사용)
+
+선언
+
+multiset<int> v;
+
+삽입
+
+v.insert(4);
+
+접근
+
+v.begin() 최소
+prev(v.end()) 최대
+
+v.find() ->해당 값 찾고 반환 있으면
+v.erase(x)
+v.empty()
+v.size()
