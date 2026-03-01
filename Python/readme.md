@@ -1,1 +1,3 @@
-
+Python
+Numpy
+MatPlotLib
